@@ -6,6 +6,10 @@ echo "> Kill Current Application"
 CURRENT_PID=$(ps -ef | grep geha-sajang | grep java | awk '{print $2}')
 sudo kill -15 ${CURRENT_PID}
 
+# 경로 수정
+echo "> Change path"
+cd /home/ubuntu/geha-sajang
+
 # 기존의 nohup.out 삭제
 sudo rm /home/ubuntu/nohup.out
 echo "> Remove nohup.out"
